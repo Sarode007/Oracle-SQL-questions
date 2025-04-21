@@ -1,0 +1,105 @@
+                              DML TASK
+                            ===========
+
+
+1.Create the EMP6 table and insert the records as below
+
+      EMPNO       ENAME        SAL         JOB                       
+     ------     --------    -------     ---------
+      1001       SURYA        8000       MANAGER
+      1002       KIRAN        6000       SALESMAN 
+      1003      ANUSHKA       3000       CLERK
+      1004      GOWTHAM       7000       SALESMAN
+      1005       RAJU         4000       CLERK          
+
+2.Set sal as 10000 to an employee whose empno is 1001 
+  from emp6 table?
+
+
+3.Set job as MANAGER and increase 2000 rupees to employee whose
+  employee no is 1004 from emp6 table?
+
+
+4.Increase the salary by 2000 for employees whose job is 'CLERK'
+  from emp6 table?
+
+
+5.Increase 1000 rupees to all employees in emp6 table?
+
+
+6.Set the sal as 8500 for employees whose ename is GOWTHAM 
+  from emp6 table?
+
+
+7.Change the job to PRESIDENT for the employee whose
+  ename is ANUSHKA ?
+
+
+8.Add an ADDRESS COLUMN TO THE EMP6 TABLE ?
+
+
+9.Set the address as HYD for the employee whose ename is
+  ANUSHKA ?
+
+
+10.Set the address as 'AMMERPET' for the employee whose 
+  empno is 1004 ? 
+
+
+11.delete an employee record whose ename is RAJU from
+   emp6 table ?
+
+
+12.delete an employee record whose empno is 1002 from emp6 table ?
+
+
+13.delete all the records from emp6 table ?
+
+
+14.What is command to get it back the data after deleting ? 
+
+-----------------------------------------------------------------------------------
+ *
+***What are differences b/w delete and truncate?(V.V.I.M.P)
+ *
+NOTE:-2 and 3 point is very important.
+
+===================================================================================
+               TRUNCATE           |               DELETE
+===================================================================================
+1.it is a ddl command             |1.it is a dml command
+                                  |
+2.structure is remains same       |2.structure is remains same
+  data is deleted permanently.    |  data is deleted temporally
+                                  |  and storing in a buffer.
+                                  |
+2.if we are using rollback        |3.by using rollback command
+  command also we can not get     |  we can get it back the data.
+  it back the data.               |      
+                                  |
+3.it is auto commit command       |3.it is not auto commit command.
+                                  |
+4.where clause can not be used    |4.where clause can be used here.
+  here.                           |
+                                  |
+5.we can delete all the records   |5.using it we can delete single or
+  only.we can not delete single   |  specific group of records or all 
+  or specific group of records.   |  records.
+                                  |
+6.it is faster                    |6.it is slower
+                                  |
+7.delete block by block           | 7.delete row by row
+				    => ROLLBACK;
+                                  |
+                                  |
+===============================*********===========================================
+
+
+
+
+
+
+
+
+
+
