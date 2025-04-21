@@ -1,0 +1,238 @@
+                                DDL TASK
+                              ===========
+
+1.Create a STUDENT table with the following columns
+
+----->SNO 
+----->SNAME
+----->GENDER
+----->FEE
+----->DOB
+----->MAILID
+
+2.What is the command to view the structure of the 
+  STUDENT table ?
+
+3.Insert records into the STUDENT table.
+
+4.Write a query to display all the records from the
+  STUDENT table ?
+
+5.Write a query to display the student names (SNAME), 
+  genders (GENDER), and dates of birth (DOB) from the 
+  STUDENT table.
+
+6.Create a ITEM table with the following columns
+
+----->ITEMNO
+----->ITEMNAME
+----->COLOUR
+----->ITEMSIZE
+----->PRICE
+
+7.Insert into records into ITEM table.
+
+8.What is command to display the ITEM table ?
+
+9.Write a query to display ITEMNAME,COLOUR from ITEM table ?
+
+10.Write a query to display ITEMNAME,COLOUR,SIZE,PRICE from 
+   ITEM table ? 
+
+
+
+-----------------------------------------------------------------------------------
+1.What are DDL commands ? What is the purpose of create command?
+
+.DDL stands for Data Defination Language
+.DDL command are used to define structure of the 
+ table.
+.The following are the DDL commands.
+1)Create                   
+2)Alter
+3)Drop                     
+4)Flashback                
+5)Truncate
+6)Purge
+7)Rename (oracle 9i)
+
+1)Create:- it is used to create database objects like 
+  =======  tables, views,sequences,indexes,procedures,
+            functions...etc 
+
+NOTE:-By default DDL commands are auto commited.
+====
+-----------------------------------------------------------------------------------
+2.What are DML commands
+.DML stands for Data Manipulation Language.
+.DML commands are used to manipulate data in a table.
+.Simply in DML all operations we are performing on data.
+.The following are the DML commands.
+1.Insert
+2.Update
+3.Delete
+4.Merge (oracle 9i)
+5.insert all
+
+
+1)Insert: It is used to insert data into a table.
+  ======
+Method1:-
+========
+insert into tablename values(value1,value2,.......);
+
+
+Method2:-(Using Substitutional operator)
+========
+
+&------>Enter value for
+
+Same like scanf function in C language.i.e is used to read
+the values from the keyboard.
+
+Here also '&' it is used to read the values from the keyboard.
+
+insert into tablename values(&col1,&col2.....);
+
+
+Method3:-(Skipping columns):-in first 2 methods we need to provide values for 
+========                      all the columns then only record is inserted.
+
+.For EG 10 columns are there i am interested to give values for only 3 columns
+ then we are using Skipping column method.
+
+Syntax:-
+=======
+insert into tablename(col1,col2....)values(value1,value2....);
+
+
+
+-----------------------------------------------------------------------------------
+
+
+
+// Answers
+
+____________________________________________________________________________________________________________
+
+// Question 1
+
+SQL> CREATE TABLE STUDENT (SNO NUMBER(3), SNAME CHAR(20), GENDER CHAR(10), FEE NUMBER(8,2), DOB DATE, MAILID VARCHAR(30) );
+
+Table created.
+
+____________________________________________________________________________________________________________
+
+// Question 2
+
+SQL> desc Student;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ SNO                                                NUMBER(3)
+ SNAME                                              CHAR(20)
+ GENDER                                             CHAR(10)
+ FEE                                                NUMBER(8,2)
+ DOB                                                DATE
+ MAILID                                             VARCHAR2(30)
+
+____________________________________________________________________________________________________________
+
+// Question 3
+
+ Insert INTO Student (SNO, SNAME , GENDER , FEE, DOB, MAILID) VALUES(&SNO, '&SNAME', '&GENDER', &FEE , '&DOB' , '&MAILID');   // For Multiple values
+
+ INSERT INTO STUDENT (SNO, SNAME , GENDER , FEE, DOB, MAILID) VALUES (3, 'Pajya Wakulkar','Male', 500, '21-mar-2003', 'prajwalwakulkar@gmail.com') ;
+
+____________________________________________________________________________________________________________
+
+// Question 4
+
+SQL> SELECT * FROM STUDENT;
+
+       SNO SNAME                          GENDER            FEE DOB       MAILID
+---------- ------------------------------ ---------- ---------- --------- ------------------------------
+         1 Mayur Sarode                   Male            30000 15-DEC-24 mayursarode@gmail.com
+         2 Chetan Patil                   Male            28000 23-JUN-03 chetanpatil@gmail.com
+         3 Pajya Wakulkar                 Male              500 21-MAR-03 prajwalwakulkar@gmail.com
+
+
+____________________________________________________________________________________________________________
+
+// Question 5
+
+SQL> SELECT  SNAME , GENDER , dob from stUDENT;
+
+SNAME                          GENDER     DOB
+------------------------------ ---------- ---------
+Mayur Sarode                   Male       15-DEC-24
+Chetan Patil                   Male       23-JUN-03
+Pajya Wakulkar                 Male       21-MAR-03
+____________________________________________________________________________________________________________
+
+// Question 6
+
+SQL> CREATE TABLE ITEM (ITEMNO NUMBER(3) , ITEMNAME VARCHAR2(30) , COLOUR VARCHAR2(10), ITEMSIZE NUMBER(3) , PRICE NUMBER(6, 2));
+___________________________________________________________________________________________________________________________________
+
+// Question 7
+
+
+SQL> INSERT INTO ITEM VALUES (1, 'Bed sheet', 'Blue', 75, 175.50);
+
+1 row created.
+
+SQL> select * from item;
+
+    ITEMNO ITEMNAME                       COLOUR       ITEMSIZE      PRICE
+---------- ------------------------------ ---------- ---------- ----------
+         1 Bed sheet                      Blue               75      175.5
+
+____________________________________________________________________________________________________________
+
+// Question 8
+
+SQL> select itemname , colour from ITEM;
+
+ITEMNAME                       COLOUR
+------------------------------ ----------
+Bed sheet                      Blue
+
+____________________________________________________________________________________________________________
+
+// Question 9
+
+SQL> SELECT ITEMNAME ,COLOUR , ITEMSIZE , PRICE FROM ITEM;
+
+ITEMNAME                       COLOUR       ITEMSIZE      PRICE
+------------------------------ ---------- ---------- ----------
+Bed sheet                      Blue               75      175.5
+____________________________________________________________________________________________________________
+
+
+
+
+____________________________________________________________________________________________________________
+
+
+
+____________________________________________________________________________________________________________
+
+
+precision => total number of digits
+scale => number of digits on right side of decimal(.)
+ex => 300.00
+p = 5
+s= 2
+
+
+
+
+
+
+
+
+
+
+
+
+
