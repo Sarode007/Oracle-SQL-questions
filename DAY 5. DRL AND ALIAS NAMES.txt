@@ -1,0 +1,26 @@
+                            DRL AND ALIAS NAMES
+                          =======================
+
+1.Write a Query to display all records from emp table ?
+
+2.Write a query to display empno,ename,sal,deptno from emp table?
+
+3.Write a query to display ename,sal from emp table ?
+
+4.Write a query to display ename,hiredate
+ from emp table?
+
+alias names
+===========
+5.Write a query to display empno as employee number,ename as employee name,sal
+  as employee salary from emp table ?
+
+6.Write a query to display ename as employee_name and hiredate as 
+  employee_joining_date from emp table ?
+
+7.Write an sql query to display the first name(use alias name staff first name)
+  position and salary of staff members from STAFF Table
+
+your output should have three columns as given below
+
+STAFF FIRST NAME    POSITION       SALARY
