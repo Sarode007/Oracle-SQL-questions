@@ -1,0 +1,50 @@
+                              DDL TASK
+                            ============
+
+
+1.Create a EMP7 table with the following columns
+----->EMPNO
+----->ENAME
+----->SAL
+----->HIREDATE
+
+
+2.What is the command to view the structure of the EMP7 table?
+
+
+3.Insert records into the EMP7 table.
+
+
+4.Write a query to display all the records from the EMP7 table.
+
+
+5.Write a query to add two columns ADDRESS ,DEPTNO to
+  the EMP7 table.
+
+
+6.Write a query to increase the size of the datatype for 
+  the ENAME column.
+
+
+7.Write a query to drop two columns from the EMP7 table.
+
+
+8.Write a query to rename the column ENAME to NAME from EMP7 table.
+
+
+9.Write a query to drop the EMP7 table.
+
+
+10.Write a query to restore the EMP7 table.
+
+
+11.What is the command to permanently delete the data from 
+   the table in the database?
+
+
+12.What is the command to rename the table EMP7 to EMP7DATA?
+
+
+
+
+-----------------------------------------------------------------------------------
